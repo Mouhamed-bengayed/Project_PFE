@@ -15,7 +15,7 @@ public class Reponse implements Serializable {
     private Date datereponse;
     private String reponse;
     @ManyToOne
-    private PorteurDeProjet porteurDeProjet;
+    private PorteurDeProject porteurDeProject;
     @ManyToOne
-    private Commontaire commontaire;
+    private Commentaire commentaire;
     }

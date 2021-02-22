@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity
 @DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING)
 @Data
-public class Computes implements Serializable {
+public class Compte implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private String numerocompte;
     private String email;

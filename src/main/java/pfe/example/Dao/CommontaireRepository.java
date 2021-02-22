@@ -1,7 +1,0 @@
-package pfe.example.Dao;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import pfe.example.Entites.Commontaire;
-public interface CommontaireRepository extends JpaRepository<Commontaire,Long> {
-
-}

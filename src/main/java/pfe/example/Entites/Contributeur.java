@@ -1,5 +1,6 @@
 package pfe.example.Entites;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 
@@ -16,9 +17,11 @@ public class Contributeur extends Utilisateur {
     @ManyToOne
     private ListeNoir listeNoir;
     @OneToMany(mappedBy = "contributeur")
+    @JsonIgnoreProperties("contributeur")
     private Collection<Contribution> contributions;
-    @OneToMany(mappedBy = "contibuteur")
-     private Collection<Vote>  votes;
+    @OneToMany(mappedBy = "contributeur")
+    @JsonIgnoreProperties("contributeur")
+    private Collection<Vote> votes;
 
 
 }

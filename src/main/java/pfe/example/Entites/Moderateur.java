@@ -8,9 +8,6 @@ import java.util.Collection;
 @Entity
 @DiscriminatorValue("moderateur")
 @Data
-public class Moderateur extends Utilisateur{
-
-
-
+public class Moderateur extends Utilisateur {
 
 }

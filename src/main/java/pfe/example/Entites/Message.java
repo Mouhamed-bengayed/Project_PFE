@@ -1,14 +1,16 @@
 package pfe.example.Entites;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import lombok.Data;
+
+import javax.persistence.*;
+
 @Entity
+@Data
 public class Message {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
     private Contributeur contributeur;
-    @ManyToOne                             
-    private PorteurDeProjet porteurDeProjet;
+    @ManyToOne
+    private PorteurDeProject porteurDeProject;
 }

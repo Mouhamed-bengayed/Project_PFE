@@ -6,15 +6,16 @@ import pfe.example.Dao.ProjectRepository;
 import pfe.example.Entites.Project;
 
 import java.util.List;
+
 @Service
 public class CategorieService {
     @Autowired
     ProjectRepository projectRepository;
 
-public List<Project> getAllproject(){
-    projectRepository.findAll();
-    return getAllproject();
+    public List<Project> getAllproject() {
+        projectRepository.findAll();
+        return getAllproject();
 
-}
+    }
 
 }

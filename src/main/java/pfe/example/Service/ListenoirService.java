@@ -12,24 +12,26 @@ import pfe.example.Entites.Utilisateur;
 @Service
 public class ListenoirService {
 
-@Autowired
+    @Autowired
     ProjectRepository projectRepository;
-@Autowired
+    @Autowired
     UtilisateurRepository utilisateurRepository;
-@Autowired
+    @Autowired
     PorteurRepository porteurRepository;
-@Autowired
+    @Autowired
     ContibuteurRepository contibuteurRepository;
 
-public void AddUtilisateur(Utilisateur utlisateur){ utilisateurRepository.save(utlisateur); }
-public void Deletemodurateur(Long idmoderateur){
-   utilisateurRepository.deleteById( idmoderateur);
-}
-public void Deleteporteur(Long idporteur){
-        utilisateurRepository.deleteById( idporteur);
+    public void AddUtilisateur(Utilisateur utlisateur) {
+        utilisateurRepository.save(utlisateur);
     }
 
+    public void Deletemodurateur(Long idmoderateur) {
+        utilisateurRepository.deleteById(idmoderateur);
+    }
 
+    public void Deleteporteur(Long idporteur) {
+        utilisateurRepository.deleteById(idporteur);
+    }
 
 
 }

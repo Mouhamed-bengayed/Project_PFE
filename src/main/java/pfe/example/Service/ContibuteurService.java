@@ -6,6 +6,7 @@ import pfe.example.Dao.*;
 import pfe.example.Entites.*;
 
 import java.util.List;
+
 @Service
 public class ContibuteurService {
     @Autowired
@@ -17,35 +18,42 @@ public class ContibuteurService {
     @Autowired
     CategorieRepository categorieRepository;
     @Autowired
-    CommontaireRepository commontaireRepository;
+    CommentaireRepository commentaireRepository;
     @Autowired
     MessageRepository messageRepository;
     @Autowired
     ReponseRepository reponseRepository;
 
-    public List<Project> getAllproject(){
+    public List<Project> getAllproject() {
         catalogueRepository.findAll();
         return getAllproject();
     }
-    public List<Categorie> getAllcategorie(){
+
+    public List<Categorie> getAllcategorie() {
         categorieRepository.findAll();
         return getAllcategorie();
     }
 
-    public List<Project> getprojectbynom(String nom){
-        List<Project> lp=contibuteurRepository.findFirstByNom(nom);
-             if(lp==null) throw new RuntimeException("nom n'est pas trouve");
+    public List<Project> getprojectbynom(String nom) {
+        List<Project> lp = contibuteurRepository.findFirstByNom(nom);
+        if (lp == null) throw new RuntimeException("nom n'est pas trouve");
         return lp;
     }
-    public void getAllcommontaire(){ commontaireRepository.findAll(); }
 
-     public  void  addcommantaire(Commontaire commontaire){
-       commontaireRepository.save(commontaire);
+    public void getAllcommontaire() {
+        commentaireRepository.findAll();
     }
-    public void addmessage(Message message){
-       messageRepository.save(message);
+
+    public void addcommantaire(Commentaire commentaire) {
+        commentaireRepository.save(commentaire);
     }
-    public void reponsemessage(Reponse reponse){
-        reponseRepository.save(reponse)   ;}
+
+    public void addmessage(Message message) {
+        messageRepository.save(message);
+    }
+
+    public void reponsemessage(Reponse reponse) {
+        reponseRepository.save(reponse);
+    }
 
 }

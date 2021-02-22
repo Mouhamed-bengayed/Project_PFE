@@ -15,26 +15,34 @@ public class PorteurService {
     @Autowired
     CategorieRepository categorieRepository;
     @Autowired
-    CommontaireRepository commontaireRepository;
+    CommentaireRepository commentaireRepository;
 
     @Autowired
     MessageRepository messageRepository;
-   public Project addproject(Project newproject){
-      return projectRepository.save(newproject);
-   }
+
+    public Project addProject(Project newproject) {
+        return projectRepository.save(newproject);
+    }
 
 
+    public void getAllCategorie() {
+        categorieRepository.findAll();
+    }
 
-   public void getAllcategorie(){
-       categorieRepository.findAll();
-   }
-   public void getAllproject(){projectRepository.findAll();}
-   public void deleteproject(long  id){
-       ProjectRepository.deleteById(id);
-   }
-   public void getAllcommontaire(){ commontaireRepository.findAll(); }
-   public void Addmessages(Message message){
-  messageRepository.save(message);
-  }
+    public void getAllProject() {
+        projectRepository.findAll();
+    }
+
+    public void deleteProject(long id) {
+        ProjectRepository.deleteById(id);
+    }
+
+    public void getAllCommontaire() {
+        commentaireRepository.findAll();
+    }
+
+    public void addMessages(Message message) {
+        messageRepository.save(message);
+    }
 
 }
