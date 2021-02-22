@@ -17,17 +17,16 @@ public class Project implements Serializable {
     private Long numeroproject;
     private String nom;
     private String descrption;
-private Date datedecreation;
+    private Date datedecreation;
     @ManyToOne
     private Categorie Categorie;
 
-   @OneToMany(mappedBy = "project")
+    @OneToMany(mappedBy = "project")
     private Collection<Vote> votes;
-    @OneToMany
+    @OneToMany(mappedBy = "project")
     private List<Contribution> contribution;
     @ManyToOne
     private PorteurDeProjet porteurDeProjet;
-
 
 
 }

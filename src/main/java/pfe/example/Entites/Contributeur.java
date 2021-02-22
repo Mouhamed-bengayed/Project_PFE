@@ -15,9 +15,9 @@ public class Contributeur extends Utilisateur {
 
     @ManyToOne
     private ListeNoir listeNoir;
-    @OneToMany
+    @OneToMany(mappedBy = "contributeur")
     private Collection<Contribution> contributions;
-    @OneToMany
+    @OneToMany(mappedBy = "contibuteur")
      private Collection<Vote>  votes;
 
 

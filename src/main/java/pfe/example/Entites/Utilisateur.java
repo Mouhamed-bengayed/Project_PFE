@@ -24,8 +24,4 @@ public class Utilisateur implements Serializable {
     @OneToMany(mappedBy = "utilisateur")
     private Collection<Computes> comptes;
 
-
-    public Utilisateur() {
-
-    }
 }

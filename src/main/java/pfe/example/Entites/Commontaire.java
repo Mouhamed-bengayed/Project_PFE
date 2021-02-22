@@ -24,7 +24,7 @@ private String commontaire;
     private Contributeur contibuteur;
     @ManyToOne
     private Project project;
-    @OneToMany
+    @OneToMany(mappedBy = "commontaire")
     private Collection<Reponse> reponses;
 
 }

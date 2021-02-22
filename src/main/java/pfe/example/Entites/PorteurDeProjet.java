@@ -11,7 +11,7 @@ import java.util.List;
 public class PorteurDeProjet extends Utilisateur {
    @ManyToOne
    private ListeNoir listeNoir;
-   @OneToMany
+   @OneToMany(mappedBy = "porteurDeProjet")
    private List<Project> project;
 
 
