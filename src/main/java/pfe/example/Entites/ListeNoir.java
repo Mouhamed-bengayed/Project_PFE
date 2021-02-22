@@ -1,7 +1,6 @@
 package pfe.example.Entites;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,7 +16,7 @@ private Long id;
   @OneToMany(mappedBy = "listeNoir")
     private Collection<PorteurDeProjet> porteurdeprojets;
    @OneToMany(mappedBy = "listeNoir")
-    private Collection<Contibuteur> contibuteurs;
+    private Collection<Contributeur> contibuteurs;
 
 
 }

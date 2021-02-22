@@ -15,6 +15,6 @@ public class Vote {
     @ManyToOne
     Project project;
     @ManyToOne
-    Contibuteur contibuteur;
+    Contributeur contibuteur;
 
 }

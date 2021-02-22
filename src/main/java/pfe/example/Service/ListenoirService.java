@@ -11,10 +11,9 @@ import pfe.example.Entites.Utilisateur;
 
 @Service
 public class ListenoirService {
-private Project project;
+
 @Autowired
     ProjectRepository projectRepository;
-
 @Autowired
     UtilisateurRepository utilisateurRepository;
 @Autowired
@@ -22,12 +21,7 @@ private Project project;
 @Autowired
     ContibuteurRepository contibuteurRepository;
 
-public void AddUtilisateur(Utilisateur utlisateur){
-
-// utilisateurRepository.save(utlisateur);
-
-}
-
+public void AddUtilisateur(Utilisateur utlisateur){ utilisateurRepository.save(utlisateur); }
 public void Deletemodurateur(Long idmoderateur){
    utilisateurRepository.deleteById( idmoderateur);
 }

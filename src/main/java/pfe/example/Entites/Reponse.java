@@ -10,12 +10,12 @@ import java.util.Date;
 @Entity
 @Data
 public class Reponse implements Serializable {
-        @Id
-        private Long id;
-        private Date datereponse;
-        private String reponse;
-       @ManyToOne
-      private PorteurDeProjet porteurDeProjet;
-       @ManyToOne
-      private Commontaire commontaire;
+    @Id
+    private Long id;
+    private Date datereponse;
+    private String reponse;
+    @ManyToOne
+    private PorteurDeProjet porteurDeProjet;
+    @ManyToOne
+    private Commontaire commontaire;
     }

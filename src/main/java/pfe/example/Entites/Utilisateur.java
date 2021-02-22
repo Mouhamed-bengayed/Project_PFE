@@ -22,7 +22,7 @@ public class Utilisateur implements Serializable {
     private String password;
 
     @OneToMany(mappedBy = "utilisateur")
-    private Collection<Comptes> comptes;
+    private Collection<Computes> comptes;
 
 
     public Utilisateur() {

@@ -1,4 +1,4 @@
-package pfe.example.Controller;
+/*package pfe.example.Controller;
 
 public class CategorieController {
-}
+}*/

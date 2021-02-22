@@ -1,4 +1,4 @@
-package pfe.example.Controller;
+/*package pfe.example.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,8 @@ public class ListNoirController {
 
     @GetMapping("/delete/utilisateur")
     public void deleteutilisateur(long id){
-        listenoirService.DeleteUtilisateur(id);
+       // listenoirService.DeleteUtilisateur(id);
 
     }
 }
+*/

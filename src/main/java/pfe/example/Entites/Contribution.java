@@ -10,10 +10,10 @@ import java.util.Date;
 public class Contribution {
     @Id
     private Long id;
-    private Double montont;
-    private Date datedecontrption;
+    private Double montant;
+    private Date datedecontribution;
     @ManyToOne
     private Project project;
     @ManyToOne
-    private Contibuteur contibuteur;
+    private Contributeur contributeur;
 }

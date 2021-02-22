@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -22,8 +23,8 @@ private Date datedecreation;
 
    @OneToMany(mappedBy = "project")
     private Collection<Vote> votes;
-    @ManyToOne
-    private Contribution contribution;
+    @OneToMany
+    private List<Contribution> contribution;
     @ManyToOne
     private PorteurDeProjet porteurDeProjet;
 

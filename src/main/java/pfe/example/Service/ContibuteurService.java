@@ -1,11 +1,12 @@
 package pfe.example.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pfe.example.Dao.*;
 import pfe.example.Entites.*;
 
 import java.util.List;
-
+@Service
 public class ContibuteurService {
     @Autowired
     ContibuteurRepository contibuteurRepository;
@@ -38,14 +39,13 @@ public class ContibuteurService {
     }
     public void getAllcommontaire(){ commontaireRepository.findAll(); }
 
-public  void  addcommantaire(Commontaire commontaire){
-       // commontaireRepository.save(commontaire)
+     public  void  addcommantaire(Commontaire commontaire){
+       commontaireRepository.save(commontaire);
     }
     public void addmessage(Message message){
        messageRepository.save(message);
     }
-public void reponsemessage(Reponse reponse){
-     //reponseRepository.save(reponse)   ;
-}
+    public void reponsemessage(Reponse reponse){
+        reponseRepository.save(reponse)   ;}
 
 }

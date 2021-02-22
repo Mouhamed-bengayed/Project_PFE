@@ -7,7 +7,7 @@ import pfe.example.Entites.Project;
 import java.util.List;
 
 @Repository
-public interface ProjectRepository extends JpaRepository<Long,Project> {
+public interface ProjectRepository extends JpaRepository<Project,Long> {
 
     static void deleteById(long id) {
     }

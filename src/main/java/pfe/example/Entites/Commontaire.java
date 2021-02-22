@@ -21,7 +21,7 @@ private String commontaire;
 
 
     @ManyToOne
-    private Contibuteur contibuteur;
+    private Contributeur contibuteur;
     @ManyToOne
     private Project project;
     @OneToMany

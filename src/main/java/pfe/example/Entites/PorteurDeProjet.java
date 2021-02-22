@@ -3,7 +3,7 @@ package pfe.example.Entites;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.List;
 
 @Entity
 @DiscriminatorValue("Porteur_p")
@@ -11,9 +11,8 @@ import java.util.Collection;
 public class PorteurDeProjet extends Utilisateur {
    @ManyToOne
    private ListeNoir listeNoir;
-   @ManyToOne
-   private Project project;
-   @ManyToOne
-   private Contibuteur contibuteur;
+   @OneToMany
+   private List<Project> project;
+
 
 }

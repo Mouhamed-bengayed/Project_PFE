@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import pfe.example.Dao.*;
 
 import pfe.example.Entites.Message;
+import pfe.example.Entites.Project;
 
 @Service
 public class PorteurService {
@@ -18,9 +19,10 @@ public class PorteurService {
 
     @Autowired
     MessageRepository messageRepository;
-   //public Project addproject(Project newproject){}
+   public Project addproject(Project newproject){
+      return projectRepository.save(newproject);
+   }
 
-      // projectRepository.save(newproject);
 
 
    public void getAllcategorie(){
@@ -31,8 +33,7 @@ public class PorteurService {
        ProjectRepository.deleteById(id);
    }
    public void getAllcommontaire(){ commontaireRepository.findAll(); }
-
-  public void Addmessages(Message message){
+   public void Addmessages(Message message){
   messageRepository.save(message);
   }
 
