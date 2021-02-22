@@ -44,7 +44,7 @@ public class Moderateursevice {
 
     public void bloquePorteur(Long id) {
         PorteurDeProject porteurDeProject = porteurRepository.getOne(id);
-      //  listenoirrepository.save(porteurDeProject);
+        listenoirrepository.save(porteurDeProject);
         porteurRepository.deleteById(id);
     }
 
