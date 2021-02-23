@@ -8,7 +8,7 @@ import pfe.example.Entites.*;
 import java.util.List;
 
 @Service
-public class ContibuteurService {
+public class ContributeurService {
     @Autowired
     ContibuteurRepository contibuteurRepository;
     @Autowired
@@ -24,35 +24,35 @@ public class ContibuteurService {
     @Autowired
     ReponseRepository reponseRepository;
 
-    public List<Project> getAllproject() {
+    public List<Project> getAllProject() {
         catalogueRepository.findAll();
-        return getAllproject();
+        return getAllProject();
     }
 
-    public List<Categorie> getAllcategorie() {
+    public List<Categorie> getAllCategorie() {
         categorieRepository.findAll();
-        return getAllcategorie();
+        return getAllCategorie();
     }
 
-    public List<Project> getprojectbynom(String nom) {
+    public List<Project> getProjectByNom(String nom) {
         List<Project> lp = contibuteurRepository.findFirstByNom(nom);
         if (lp == null) throw new RuntimeException("nom n'est pas trouve");
         return lp;
     }
 
-    public void getAllcommontaire() {
+    public void getAllCommentaire() {
         commentaireRepository.findAll();
     }
 
-    public void addcommantaire(Commentaire commentaire) {
+    public void addCommentaire(Commentaire commentaire) {
         commentaireRepository.save(commentaire);
     }
 
-    public void addmessage(Message message) {
+    public void addMessage(Message message) {
         messageRepository.save(message);
     }
 
-    public void reponsemessage(Reponse reponse) {
+    public void reponseMessage(Reponse reponse) {
         reponseRepository.save(reponse);
     }
 

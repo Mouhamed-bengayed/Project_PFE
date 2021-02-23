@@ -43,8 +43,8 @@ public class Moderateursevice {
     }
 
     public void bloquePorteur(Long id) {
-        PorteurDeProject porteurDeProject = porteurRepository.getOne(id);
-
+        PorteurDeProject porteurDeProject = (PorteurDeProject) porteurRepository.findAllById(id);
+        //listenoirrepository.save(porteurDeProject);
         porteurRepository.deleteById(id);
     }
 
