@@ -14,8 +14,6 @@ public class ContributeurService {
     @Autowired
     ProjectRepository projectRepository;
     @Autowired
-    CatalogueRepository catalogueRepository;
-    @Autowired
     CategorieRepository categorieRepository;
     @Autowired
     CommentaireRepository commentaireRepository;
@@ -24,10 +22,7 @@ public class ContributeurService {
     @Autowired
     ReponseRepository reponseRepository;
 
-    public List<Project> getAllProject() {
-        catalogueRepository.findAll();
-        return getAllProject();
-    }
+
 
     public List<Categorie> getAllCategorie() {
         categorieRepository.findAll();

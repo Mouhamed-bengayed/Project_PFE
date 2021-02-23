@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pfe.example.Dao.*;
 import pfe.example.Entites.Moderateur;
+import pfe.example.Entites.PorteurDeProject;
 import pfe.example.Entites.Project;
 import pfe.example.Entites.Utilisateur;
 
@@ -25,8 +26,8 @@ public class ListenoirService {
         moderateurRepository.save(moderateur);
     }
 
-    public void addPorteur(Moderateur moderateur) {
-        moderateurRepository.save(moderateur);
+    public void addPorteur(PorteurDeProject porteurDeProject) {
+        porteurRepository.save(porteurDeProject);
     }
 
     public void deleteModurateur(Long idmoderateur) {
