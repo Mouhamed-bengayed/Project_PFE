@@ -3,11 +3,9 @@ package pfe.example.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pfe.example.Dao.*;
-import pfe.example.Entites.Categorie;
-import pfe.example.Entites.PorteurDeProject;
-import pfe.example.Entites.Project;
-import pfe.example.Entites.Contributeur;
+import pfe.example.Entites.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -44,20 +42,25 @@ public class Moderateursevice {
 
     public void bloquePorteur(Long id) {
         PorteurDeProject porteurDeProject = (PorteurDeProject) porteurRepository.findAllById(id);
-        //listenoirrepository.save(porteurDeProject);
-        porteurRepository.deleteById(id);
+        ListeNoir listeNoir=new ListeNoir();
+        listeNoir.setPorteurdeprojets((Collection<PorteurDeProject>) porteurDeProject);
+        listenoirrepository.save(listeNoir);
+        //porteurRepository.deleteById(id);
     }
 
     public void bloqueContibuteur(Long id) {
         Contributeur contributeur = contibuteurRepository.getOne(id);
-        //listenoirrepository.save(contributeur);
-        contibuteurRepository.deleteById(id);
+        ListeNoir listeNoir=new ListeNoir();
+        listeNoir.setContibuteurs((Collection<Contributeur>) contributeur);
+        listenoirrepository.save(listeNoir);
+
+       // contibuteurRepository.deleteById(id);
     }
 
     public void activerPorteur(Long id) {
 
         //PorteurDeProjet porteurDeProjet=listenoirrepository.getOne(id);
-        //  porteurRepository.save(porteurDeProjet);
+        //porteurRepository.save(porteurDeProjet);
         listenoirrepository.deleteById(id);
     }
 

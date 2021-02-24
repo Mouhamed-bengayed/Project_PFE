@@ -16,9 +16,12 @@ public class CategorieService {
     @Autowired
     CategorieRepository categorieRepository;
 
-   public List<Project> getAllProjectCategories(Categorie categorie){
-       return null;
-   }
+public List<Categorie> getAllCategories(){
+    categorieRepository.findAll();
+    return getAllCategories();
+}
+
+
 
 
 }

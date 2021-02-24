@@ -24,9 +24,9 @@ public class ContributeurService {
 
 
 
-    public List<Categorie> getAllCategorie() {
+    public List<Categorie> getAllCategories() {
         categorieRepository.findAll();
-        return getAllCategorie();
+        return getAllCategories();
     }
 
     public List<Project> getProjectByNom(String nom) {
@@ -35,8 +35,9 @@ public class ContributeurService {
         return lp;
     }
 
-    public void getAllCommentaire() {
+    public List<Commentaire> getAllCommentaires() {
         commentaireRepository.findAll();
+        return getAllCommentaires();
     }
 
     public void addCommentaire(Commentaire commentaire) {
