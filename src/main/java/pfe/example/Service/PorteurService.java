@@ -25,7 +25,7 @@ public class PorteurService {
     }
 
 
-    public void getAllCategorie() {
+    public void getAllCategories() {
         categorieRepository.findAll();
     }
 
@@ -37,7 +37,7 @@ public class PorteurService {
         ProjectRepository.deleteById(id);
     }
 
-    public void getAllCommontaire() {
+    public void getAllCommentaires() {
         commentaireRepository.findAll();
     }
 
